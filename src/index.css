@@ -1,0 +1,15 @@
+/* Tailwind CSS v3.4.17 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+  font-display: swap;
+}
+/* Force default text to black */
+body {
+  color: black;
+}
