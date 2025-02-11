@@ -14,16 +14,32 @@ import Contact from "./components/sections/Contact";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Hero />} />
-          <Route path="about" element={<About />} />
-          <Route path="resume" element={<Resume />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </Router>
+
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={<Layout />}
+          >
+            <Route
+              index
+              element={<Hero />}
+            />
+            <Route
+              path="about"
+              element={<About />}
+            />
+            <Route
+              path="resume"
+              element={<Resume />}
+            />
+            <Route
+              path="contact"
+              element={<Contact />}
+            />
+          </Route>
+        </Routes>
+      </Router>
   );
 }
 
