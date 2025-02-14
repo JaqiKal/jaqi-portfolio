@@ -14,8 +14,7 @@ import Contact from "./components/sections/Contact";
 
 function App() {
   return (
-
-      <Router>
+      <Router basename="/jaqi-portfolio/">
         <Routes>
           <Route
             path="/"
