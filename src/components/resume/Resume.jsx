@@ -1,6 +1,10 @@
 /** <components/section/Resume.jsx>
  * This file contains the Resume component.
  */
+
+import { skills, skillIcons } from "../../data/skillsData";
+import IconsCloud from "../ui/IconsCloud";
+
 const Resume = () => (
   <section
     id="resume"
@@ -15,12 +19,35 @@ const Resume = () => (
       </p>
     </div>
 
-    {/* Skills Accordion */}
-    <div className="mt-8 sm:mt-12">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Kompetensöversikt</h2>
-      {/* Accordion Component */}
-      {/* Expandable areas with icons */}
+{/* Skills & Icon Particle Cloud */}
+<div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      
+      {/* Skills Table */}
+      <div className="overflow-x-auto rounded-xl shadow-lg bg-neutral-800/70 backdrop-blur p-4 sm:p-6">
+        <table className="w-full table-auto">
+          <thead>
+            <tr className="text-left border-b border-neutral-600">
+              <th className="pb-2">Kompetensområde</th>
+              <th className="pb-2">Färdigheter</th>
+            </tr>
+          </thead>
+          <tbody>
+            {skills.map(({ title, content }, idx) => (
+              <tr key={idx} className="border-b border-neutral-700 last:border-b-0">
+                <td className="py-2 pr-4 font-semibold align-top">{title}</td>
+                <td className="py-2 align-top">{content}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Animated Icons Cloud */}
+      <div className="overflow-hidden rounded-xl shadow-lg bg-neutral-800/70 backdrop-blur p-4 sm:p-6">
+
+      <IconsCloud />
     </div>
+
 
     {/* Work Experience Cards */}
     <div className="mt-8 sm:mt-12">
@@ -136,8 +163,10 @@ const Resume = () => (
           </div>
         </div>
       </div>
-    </div>
+      </div>
+</div>
   </section>
 );
+
 
 export default Resume;
