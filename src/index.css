@@ -4,6 +4,13 @@
 @tailwind utilities;
 
 /* Custom CSS */
+
+/* smooth scrolling across sections */
+html {
+  scroll-behavior: smooth;
+}
+
+
 @font-face {
   font-family: "Poppins";
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
