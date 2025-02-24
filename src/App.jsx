@@ -5,40 +5,22 @@
  * It also uses the Route component to define the different
  * routes of the application.
  */
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import Hero from "./components/sections/Hero";
-import About from "./components/sections/About";
-import Resume from "./components/sections/Resume";
-import Contact from "./components/sections/Contact";
+import Hero from "./components/hero/Hero";
+import About from "./components/about/About";
+import Resume from "./components/resume/Resume";
+import Portfolio from "./components/portfolio/Portfolio";
+import Contact from "./components/contact/Contact";
 
 function App() {
   return (
-      <Router basename="/jaqi-portfolio/">
-        <Routes>
-          <Route
-            path="/"
-            element={<Layout />}
-          >
-            <Route
-              index
-              element={<Hero />}
-            />
-            <Route
-              path="about"
-              element={<About />}
-            />
-            <Route
-              path="resume"
-              element={<Resume />}
-            />
-            <Route
-              path="contact"
-              element={<Contact />}
-            />
-          </Route>
-        </Routes>
-      </Router>
+    <Layout>
+      <Hero />
+      <About />
+      <Resume />
+      <Portfolio/>
+      <Contact />
+    </Layout>
   );
 }
 
